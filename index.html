@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="accessibility-bar" role="toolbar" aria-label="Ferramentas de Acessibilidade">
+        <button onclick="alterarFonte(1)" aria-label="Aumentar tamanho do texto">A+</button>
+        <button onclick="alterarFonte(-1)" aria-label="Diminuir tamanho do texto">A-</button>
+        <button onclick="alternarContraste()" aria-label="Alternar Alto Contraste">Alternar Cor</button>
+    </div>
+
+    <div class="quiz-container">
+        <h1>Quiz do Agrinho 🌾</h1>
+        <hr class="divider">
+
+        <div id="start-screen" class="screen-content">
+            <p class="welcome-text">Bem-vindo ao Quiz do Agrinho! Teste os seus conhecimentos sobre sustentabilidade, cidadania e o meio ambiente de forma divertida.</p>
+            <button class="action-btn" onclick="iniciarJogo()">Começar Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen-content hide">
+            <div id="question" class="question">A carregar pergunta...</div>
+            <div id="options" class="options-container"></div>
+            <button id="next-btn" class="action-btn hide" onclick="proximaPergunta()">Próxima Pergunta</button>
+        </div>
+
+        <div id="result-screen" class="screen-content hide">
+            <h2>Fim do Quiz!</h2>
+            <p id="score" class="score-text"></p>
+            <button class="action-btn" onclick="voltarParaInicio()">Ir para o Início</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
